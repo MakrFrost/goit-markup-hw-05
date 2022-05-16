@@ -63,7 +63,7 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button type="button" class="button">Заказать услугу</button>
+          <button data-modal-open type="button" class="button">Заказать услугу</button>
         </div>
       </section>
 
@@ -114,28 +114,27 @@
           <h2 class="work-title">Чем мы занимаемся</h2>
           <ul class="work-list">
             <li class="work-item">
-              <img
-                class="work-img"
-                src="./images/index/box1.jpg"
-                alt="Написание кода вручную"
-                width="370"
-              />
+              <div class="work-img">
+                <img src="./images/index/box1.jpg" alt="Написание кода вручную" width="370" />
+                <p class="work-text">Десктопные приложения</p>
+              </div>
+            </li>
+
+            <li class="work-item">
+              <div class="work-img">
+                <img src="./images/index/box2.jpg" alt="Телефон и ноутбук в работе" width="370" />
+                <p class="work-text">Мобильные приложения</p>
+              </div>
             </li>
             <li class="work-item">
-              <img
-                class="work-img"
-                src="./images/index/box2.jpg"
-                alt="Телефон и ноутбук в работе"
-                width="370"
-              />
-            </li>
-            <li class="work-item">
-              <img
-                class="work-img"
-                src="./images/index/box3.jpg"
-                alt="Изображение на графическом планшете"
-                width="370"
-              />
+              <div class="work-img">
+                <img
+                  src="./images/index/box3.jpg"
+                  alt="Изображение на графическом планшете"
+                  width="370"
+                />
+                <p class="work-text">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -514,6 +513,16 @@
         </div>
       </div>
     </footer>
+    <!-- Модальное окно -->
+    <div data-modal class="backdrop is-hidden">
+      <div class="modal">
+        <button data-modal-close class="modal-button" type="button">
+          <svg class="modal-icon" width="11" height="11">
+            <use href="./images/icons.svg#close-btn"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
