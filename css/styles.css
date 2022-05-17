@@ -8,6 +8,7 @@
   --bcg-color: #2f303a;
   --bcg-img-color: #f5f4fa;
   --icon-color: #afb1b8;
+  --bcg-color-hero: #2f303a40;
 }
 
 /* Добавляет стили для тега body */
@@ -24,10 +25,8 @@ body {
 /* Главный контейнер со всем контентом */
 .container {
   width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 /* Добавляет стили для тега nav, header и li */
@@ -174,15 +173,16 @@ body {
 /* Добавляет стили для класса hero */
 
 .hero {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(to top, var(--bcg-color-hero), var(--bcg-color-hero)),
     url(../images/index/team-work.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-size: cover;
 
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
   color: var(--color-white);
-  background-color: var(--bcg-color);
 
   text-align: center;
 }
@@ -546,7 +546,8 @@ body {
 
   fill: var(--icon-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -882,7 +883,7 @@ body {
 
   transform: translateY(100%);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .works-link:hover .works-overlay,
@@ -894,7 +895,7 @@ body {
   transform: translateY(0);
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .works-link {
